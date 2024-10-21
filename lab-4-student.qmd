@@ -1,9 +1,17 @@
 ---
 title: "Lab 4: Childcare Costs in California"
-author: "Your name here!"
+author: "Ian Cay!"
 format: html
 editor: source
 embed-resources: true
+code-fold: true
+code-tools: true
+execute: 
+  echo: true
+  error: true
+  warning: false
+  message: false
+
 ---
 
 ## The Data
@@ -17,7 +25,7 @@ The data come to us from [TidyTuesday](https://github.com/rfordatascience/tidytu
 
 ```{r}
 #| label: setup
-
+library(tidyverse)
 ```
 
 ```{r}
@@ -26,10 +34,12 @@ The data come to us from [TidyTuesday](https://github.com/rfordatascience/tidytu
 childcare_costs <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-05-09/childcare_costs.csv')
 
 counties <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-05-09/counties.csv')
+
+dim(childcare_costs)
 ```
 
 **1. Briefly describe the dataset (~ 4 sentences). What information does it contain?**
-
+The childcare_costs dataset contains 61 columns (variables) with 34567 rows (observations). This dataset was collected by the National Database of Childhood Prices (NDCP) from 2008 to 2018. 
 ## California Childcare Costs
 
 Let's start by focusing only on California. 
